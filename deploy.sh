@@ -41,7 +41,9 @@ log "Installing dependencies..."
 pnpm install --frozen-lockfile || die "依赖安装失败"
 
 log "Building project..."
-pnpm run build || die "构建失败"
+# pnpm run build || die "构建失败"
+
+# TODO 检查服务7122是否启动 - 如果没有则启动旧服务，如果启动了就跳过
 
 # ----------------------------
 # 2. 制作临时发布包（stage）
