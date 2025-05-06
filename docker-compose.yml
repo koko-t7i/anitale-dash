@@ -1,0 +1,14 @@
+services:
+  myapp-blue:
+    build: ./
+    container_name: green
+    ports:
+      - "7122:7122"
+    restart: always
+
+  myapp-green:
+    build: ./
+    container_name: blue
+    ports:
+      - "7123:7123"
+    restart: always
